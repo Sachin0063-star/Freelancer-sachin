@@ -1,0 +1,339 @@
+
+/*============================
+    Testimonial Section  CSS
+=============================*/
+
+
+
+.author-thumb-item{
+    display: flex;
+    align-items: center;
+    & .author-thumb{
+        flex: 0 0 auto;
+        width: 50px;
+        margin-right: 20px;
+        & img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+    }
+    & .author-info{
+        & h5{
+            margin-bottom: 5px;
+        }
+    }
+}
+
+.testimonial-slider{
+    margin-left: -15px;
+    margin-right: -15px;
+    & .slick-slide{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
+.testimonial-slider-three{
+    margin-left: -15px;
+    margin-right: -15px;
+    & .slick-slide{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
+.orbia-testimonial-item{
+    &.style-one{
+        background-color: $white-color;
+        border-radius: 30px;
+        padding: 40px;
+        & .ratings{
+            margin-bottom: 35px;
+        }
+        & .author-info-quote-wrap{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        & p{
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: $heading-color;
+            font-family: $heading-font;
+            line-height: 28px;
+        }
+    }
+    &.style-two{
+        & .testimonial-content{
+            & .ratings{
+                margin-bottom: 15px;
+            }
+            & p{
+                color: $white-color;
+                margin-bottom: 35px;
+                font-size: 20px;
+                font-family: $heading-font;
+                line-height: 30px;
+                @include respond(md){
+                    font-size: 18px;
+                }
+            }
+            & .author-thumb-item{
+                & .author-info{
+                    & h5{
+                        color: $white-color;
+                    }
+                    & .position{
+                        color: rgba(255, 255, 255, 0.7);
+                    }
+                }
+            }
+        }
+    }
+    &.style-three{
+        background-color: $gray-color;
+        padding: 30px;
+        border: 1px solid transparent;
+        border-radius: 20px;
+        transition: all .3s;
+        &:hover{
+            border-color: $primary-color;
+        }
+        & .testimonial-content{
+            & .quote-ratings-wrap{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 15px;
+                & .quote{
+                    & i{
+                        font-size: 30px;
+                        color: $primary-color;
+                    }
+                }
+            }
+            & p{
+                margin-bottom: 30px;
+                padding-bottom: 25px;
+                border-bottom: 1px solid $border-color;
+            }
+        }
+    }
+}
+
+/* Testimonial Section CSS */ 
+
+.orbia-testimonial_one{
+    background-color: $gray-color;
+    margin: 0 30px;
+    border-radius: 30px;
+    overflow: hidden;
+    @include respond(xxxl){
+        margin: 0px 15px;
+        border-radius: 15px;
+    }
+    @include respond(xl){
+        margin: 0px;
+        border-radius: 0;
+    }
+    & .testimonial-image{
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        bottom: 20px;
+        z-index: -1;
+        max-width: 700px;
+        width:100%;
+        height: 95%;
+        & img{
+            border-radius: 40px;
+            width: 100%;
+            height: 100%;
+        }
+        @include respond(xxxl){
+            max-width: 650px;
+        }
+        @include respond(xl){
+            display: none;
+        }
+    }
+    & .testimonial-shape{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 75%;
+        height: 100%;
+        z-index: -1;
+    }
+    & .testimonial-arrows{
+        display: flex;
+        align-items: center;
+        & .slick-arrow{
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            border: 1px solid $border-color;
+            position: relative;
+            z-index: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all .3s;
+            &:after{
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: '';
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background: linear-gradient(266deg, #F63 -1.18%, #6D2CF9 96.14%);
+                visibility: hidden;
+                opacity: 0;
+                transition: all .3s;
+                z-index: -1;
+            }
+            &.next{
+                margin-left: 15px;
+            }
+            &:hover{
+                color: $white-color;
+                border-color: transparent;
+                &:after{
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+
+
+.orbia-testimonial_two{
+    & .testimonial-img{
+        position: absolute;
+        top: 40px;
+        bottom: 40px;
+        right: 40px;
+        width: 45%;
+        height: 90%;
+        z-index: -1;
+        border-radius: 30px;
+        @include respond(xl){
+            display: none;
+        }
+    }
+    & .testimonial-wrapper{
+        position: relative;
+        & .testimonial-arrows{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            @include respond(md){
+                display: none;
+            }
+            & .slick-arrow{
+                width: 55px;
+                height: 55px;
+                border-radius: 50%;
+                background-color: $white-color;
+                color: $secondary-color;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid $border-color;
+                cursor: pointer;
+                z-index: 1;
+                transition: all .3s;
+                &:hover{
+                    background-color: $secondary-color;
+                    color: $white-color;
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+    & .orbia-testimonial-item{
+        &.style-two{
+            & .testimonial-content{
+                & .author-thumb-item{
+                    & .author-thumb{
+                        width: 80px;
+                        & img{
+                            width: 80px;
+                            height: 80px;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & .orbia-counter-wrap{
+        margin-top: 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include respond(md){
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        & h2{
+            color: $white-color;
+            font-size: $h2-font;
+            @include respond(md){
+                margin-bottom: 20px;
+            }
+        }
+        & h5{
+            max-width: 315px;
+            color: $white-color;
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+}
+
+
+
+.orbia-testimonial_three{
+    & .testimonial-arrows{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 60px;
+        gap: 15px;
+        & .slick-arrow{
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: $heading-color;
+            transition: all .3s;
+            &:hover{
+                color: $primary-color;
+            }
+        }
+        & .progress-wrap{
+            width: 50%;
+            height: 1px;
+            background-color: $border-color;
+            border-radius: 3px;
+            overflow: hidden;
+            & .progress-line{
+                width: 0%;
+                height: 100%;
+                background-color: $primary-color;
+                transition: width 0.4s ease;
+            }
+        }
+    }
+}

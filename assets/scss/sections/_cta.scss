@@ -1,0 +1,291 @@
+
+/*========================
+    CTA Section  CSS
+==========================*/
+
+.orbia-cta_one{
+    &:after{
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba(1, 15, 52, 0.91);
+        z-index: -1;
+    }
+    & .orbia-image{
+        position: absolute;
+        @include respond(xl){
+            display: none;
+        }
+        & img{
+            border-radius: 30px;
+        }
+        &.image_one{
+            top: 130px;
+            left: 176px;
+            transform: rotate(-5deg);
+            @include respond(xxxl){
+                left: 50px;
+            }
+        }
+        &.image_two{
+            top: 145px;
+            right: 200px;
+            transform: rotate(15deg);
+            @include respond(xxxl){
+                right: 50px;
+            }
+        }
+    }
+    & .orbia-content-box{
+        & .theme-btn{
+            &.style-two{
+                color: $white-color;
+                &:hover{
+                    background-color: $white-color;
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+}
+
+
+.orbia-cta_two{
+    padding-top: 400px;
+    padding-bottom: 120px;
+    @include respond(xl){
+        padding: 120px 0;
+    }
+    @include respond(md){
+        padding: 80px 0;
+    }
+    &:after{
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba(1, 15, 52, 0.80);
+        z-index: -1;
+    }
+    & .cta-wrapper{
+        background-color: $white-color;
+        padding: 50px 60px 60px;
+        border-radius: 50px;
+        @include respond(md){
+            padding: 40px 30px 30px;
+            border-radius: 30px;
+        }
+        & .text-box{
+            & h3{
+                margin-bottom: 33px;
+                font-size: 36px;
+                @include respond(md){
+                    font-size: 22px;
+                }
+                & span{
+                    color: $primary-color;
+                }
+            }
+        }
+        & .orbia-avatar-box{
+            & .avatar-list{
+                display: flex;
+                align-items: center;
+                @include respond(xl){
+                    justify-content: center;
+                    margin-bottom: 30px;
+                }
+                @include respond(md){
+                    flex-direction: column;
+                }
+                & .text{
+                    margin-left: 15px;
+                    @include respond(md){
+                        margin-left: 0;
+                        margin-top: 15px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        & .content-box{
+            @include respond(xl){
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+.orbia-cta_three{
+    position: relative;
+    z-index: 1;
+    padding: 210px 0 220px;
+    @include respond(lg){
+        padding: 100px 0 120px;
+    }
+    &:after{
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba(1, 15, 52, 0.80);
+        z-index: -1;
+    }
+    & .orbia-content-box{
+        & h2{
+            margin-bottom: 30px;
+            @include respond(lg){
+                font-size: 40px;
+            }
+            @include respond(md){
+                font-size: 28px;
+            }
+        }
+        & .orbia-button{
+            & .theme-btn{
+                margin-bottom: 15px;
+                &.style-one{
+                    margin-left: 30px;
+                    background-color: $secondary-color;
+                    color: $white-color;
+                    @include respond(md){
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* Intro Section */ 
+
+.orbia-intro_one{
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin: 0 30px;
+    border-radius: 30px;
+    @include respond(xxxl){
+        margin: 0px 15px;
+        border-radius: 15px;
+    }
+    @include respond(xl){
+        margin: 0px;
+        border-radius: 0px;
+    }
+    &:after{
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba(1, 15, 52, 0.30);
+        z-index: -1;
+    }
+    & .play-button{
+        & .video-popup{
+            position: relative;
+            z-index: 1;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $white-color;
+            color: $primary-color;
+            font-size: 24px;
+            & i{
+                background: linear-gradient(266deg, #F63 -1.18%, #6D2CF9 96.14%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                color: transparent;
+            }
+            &:before,
+            &:after{
+                position: absolute;
+                left: 0;
+                top: 0;
+                content: "";
+                border-radius: 50%;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+            }
+            &:before{
+                background-color: rgba(255, 255, 255, 0.5);
+                animation: playpopup infinite ease-in 2s;
+            }
+            &:after{
+                background-color: rgba(255, 255, 255, 0.4);
+                animation: playpopup infinite ease-in-out 4s;
+            }
+        }
+    }
+}
+
+.orbia-intro_two{
+    &:after{
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(1, 15, 52, 0.69);
+        z-index: -1;
+    }
+    & .orbia-content-box{
+        & h2{
+            font-size: $h2-font;
+            @include respond(md){
+                font-size: $h3-font;
+            }
+        }
+        & .play-button{
+            & .video-popup{
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $white-color;
+                font-size: 24px;
+                color: $secondary-color;
+                position: relative;
+                z-index: 1;
+                &:before,
+                &:after{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    content: "";
+                    border-radius: 50%;
+                    width: 100%;
+                    height: 100%;
+                    z-index: -1;
+                }
+                &:before{
+                    background-color: rgba(255, 255, 255, 0.5);
+                    animation: playpopup infinite ease-in 2s;
+                }
+                &:after{
+                    background-color: rgba(255, 255, 255, 0.4);
+                    animation: playpopup infinite ease-in-out 4s;
+                }
+            }
+        }
+    }
+}

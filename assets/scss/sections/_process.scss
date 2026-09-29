@@ -1,0 +1,108 @@
+
+/*=========================
+    Process Section  CSS
+==========================*/
+
+
+
+.orbia-process_one{
+    & .process-shape{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        @include respond(xl){
+            display: none;
+        }
+    }
+    & .process-wrapper{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        @include respond(lg){
+            flex-direction: column;
+        }
+    }
+    & .orbia-process-box{
+        padding: 40px;
+        border-radius: 20px;
+        background: linear-gradient(56deg, #D5313D -141.22%, rgba(255, 255, 255, 0.00) 117.72%);
+        text-align: center;
+        & .content{
+            & img{
+                margin-bottom: 50px;
+            }
+        }
+    }
+    & .orbia-proces-arrow-box{
+        text-align: center;
+        & .content{
+            & img{
+                margin-bottom: 20px;
+            }
+        }
+        @include respond(xl){
+            display: none;
+        }
+        @include respond(lg){
+            display: block;
+        }
+    }
+    & .orbia-process-box-wrap{
+        border: 1px dashed $secondary-color;
+        border-radius: 20px;
+        padding: 20px;
+        & .orbia-process-circle-box{
+            position: relative;
+            z-index: 1;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            & .content{
+                & img{
+                    margin-bottom: 20px;
+                }
+            }
+            &.bg_one{
+                background: linear-gradient(50deg, #D5313D -54.62%, rgba(255, 255, 255, 0.00) 100%);
+            }
+            &.bg_two{
+                margin-top: -50px;
+                z-index: -1;
+                background: linear-gradient(266deg, #F63 -1.18%, #6D2CF9 96.14%);
+                & .content{
+                    & p{
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.orbia-process_two{
+    & .process-wrapper{
+        position: relative;
+        & .shape{
+            position: absolute;
+            @include respond(xl){
+                display: none;
+            }
+            &.shape-one{
+                top: 10%;
+                left: 25%;
+            }
+            &.shape-two{
+                top: 10%;
+                right: 25%;
+            }
+        }
+    }
+}

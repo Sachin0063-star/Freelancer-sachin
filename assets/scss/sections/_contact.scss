@@ -1,0 +1,330 @@
+
+/*========================
+    Contact Section  CSS
+==========================*/
+
+
+
+.orbia-info-box{
+    &.style-one{
+        display: flex;
+        align-items: center;
+        & .icon{
+            flex: 0 0 auto;
+            margin-right: 15px;
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(7px);
+            color: $white-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        & .content{
+            & span{
+                font-size: 20px;
+                color: rgba(255, 255, 255, 0.70);
+            }
+            & h4{
+                font-size: $h4-font;
+                color: $white-color;
+            }
+        }
+    }
+    &.style-two{
+        display: flex;
+        align-items: center;
+        & .icon{
+            flex: 0 0 auto;
+            margin-right: 10px;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(266deg, #F63 -1.18%, #6D2CF9 96.14%);
+            font-size: 12px;
+            color: $white-color;
+        }
+        & .info{
+            & p{
+                font-size: 18px;
+                color: #D8D8DC;
+            }
+        }
+    }
+}
+
+
+.orbia-contact_one{
+    margin: 0 30px;
+    border-radius: 30px;
+    @include respond(xxxl){
+        margin: 0 15px;
+        border-radius: 15px;
+    }
+    @include respond(xl){
+        margin: 0;
+        border-radius: 0;
+    }
+    & .orbia-contact-wrapper{
+        max-width: 560px;
+        border-radius: 30px;
+        background-color: $white-color;
+        backdrop-filter: blur(32px);
+        padding: 50px 60px 60px;
+        @include respond(xl){
+            max-width: 100%;
+        }
+        @include respond(md){
+            text-align: center;
+            padding: 50px 30px 60px;
+        }
+        & h3{
+            font-size: $h3-font;
+            margin-bottom: 15px;
+
+        }
+        & p{
+            margin-bottom: 30px;
+        }
+        & .form_control{
+            width: 100%;
+            padding: 14px 25px;
+            border-radius: 50px;
+            border:1px solid $border-color;
+            margin-bottom: 30px;
+        }
+        & textarea.form_control{
+            border-radius: 20px;
+        }
+    }
+    & .orbia-content-box{
+        & > p{
+            color: rgba(255, 255, 255, 0.70);
+            margin-bottom: 35px;
+        }
+        & .orbia-button-wrapper{
+            & .theme-btn{
+                margin-bottom: 20px;
+                &.style-two{
+                    margin-left: 30px;
+                    color: $white-color;
+                    @include respond(md){
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+        & .orbia-contact-info-list{
+            margin-top: 110px;
+            border-top: 1px solid rgba(255, 255, 255, 0.20);
+            & .orbia-info-box{
+                padding: 30px 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.20);
+                & .content{
+                    & h4{
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.orbia-contact_two{
+    & .contact-wrapper{
+        background-color: $white-color;
+        padding: 60px;
+        border-radius: 30px;
+        @include respond(md){
+            padding: 60px 30px;
+        }
+        & .sub-title{
+            margin-bottom: 15px;
+        }
+        & h3{
+            margin-bottom: 25px;
+        }
+        & p{
+            margin-bottom: 30px;
+        }
+        & .form_control{
+            padding-bottom: 20px;
+            border:none;
+            border-bottom: 1px solid $border-color;
+            margin-bottom: 20px;
+        }
+        & .form-check{
+            margin-bottom: 20px;
+            & .form-check-input{
+                border: 1px solid $border-color;
+            }
+        }
+        & .author-thumb-item{
+            @include respond(md){
+                margin-bottom: 30px;
+            }
+            & .author-thumb{
+                width: 55px;
+                & img{
+                    width: 55px;
+                    height: 55px;
+                    border: 1px solid $primary-color;
+                }
+            }
+            & .author-info{
+                & h5{
+                    margin-bottom: 0;
+                }
+                & .position{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    & .orbia-content-box{
+        padding-left: 30px;
+        @include respond(xl){
+            padding-left: 0;
+        }
+    }
+    & .orbia-contact-accordion{
+        & .nav-tabs{
+            border-bottom: 3px solid $border-color;
+            margin-bottom: 40px;
+            & .nav-link{
+                position: relative;
+                border: none;
+                background-color: transparent;
+                font-size: 24px;
+                font-weight: 500;
+                font-family: $heading-font;
+                color: $text-color;
+                padding: 0 25px 30px 0;
+                margin-right: 30px;
+                @include respond(xxxl){
+                    padding: 0 15px 30px 0;
+                }
+                @include respond(md){
+                    font-size: 16px;
+                    margin-right: 10px;
+                    padding: 0 15px 15px 0;
+                }
+                &:after{
+                    position: absolute;
+                    bottom: -1.5px;
+                    left: 0;
+                    content: '';
+                    width: 100%;
+                    height: 2px;
+                    background-color: $primary-color;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: all .3s;
+                }
+                &.active{
+                    color: $primary-color;
+                    &:after{
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        & .accordion-card{
+            &.style-two{
+                padding-bottom: 25px;
+                & .accordion-header{
+                    & .accordion-title{
+                        font-weight: 400;
+                        &:after{
+                            color: $heading-color;
+                        }
+                    }
+                    & .accordion-title[aria-expanded=true]{
+                        &:after{
+                            color: $primary-color;
+                        }
+                    }
+                }
+                & .accordion-content{
+                    padding-top: 15px;
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+
+.orbia-contact_three{
+    & .contact-wrapper{
+        background-color: $gray-color;
+        padding: 50px 60px;
+        border-radius: 30px;
+        @include respond(md){
+            padding: 50px 30px;
+        }
+        & h3{
+            margin-bottom: 30px;
+        }
+        & .form_control{
+            width: 100%;
+            padding: 14px 25px;
+            border-radius: 50px;
+            border:1px solid $border-color;
+            margin-bottom: 30px;
+        }
+        & textarea.form_control{
+            border-radius: 20px;
+        }
+    }
+}
+
+.orbia-contact-info-sec{
+    & .orbia-content-box{
+        padding-right: 35px;
+        @include respond(xl){
+            padding-right: 0;
+        }
+        & .info-list{
+            & h6{
+                font-weight:500;
+                margin-bottom: 5px;
+            }
+            & p{
+                line-height: 26px;
+            }
+            & .social-box{
+                & a{
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 50%;
+                    border: 1px solid $border-color;
+                    color: $heading-color;
+                    &:not(:last-child){
+                        margin-right: 5px;
+                    }
+                    &:hover{
+                        background: linear-gradient(266deg, #F63 -1.18%, #6D2CF9 96.14%);
+                        border-color: transparent;
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+    }
+    & .map-box{
+        & iframe{
+            height: 450px;
+            border-radius: 30px;
+        }
+    }
+}

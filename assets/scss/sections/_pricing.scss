@@ -1,0 +1,253 @@
+
+/*=========================
+    Pricing Section  CSS
+==========================*/
+
+.orbia-pricing_one{
+    border-radius: 30px;
+    margin: 0 30px;
+    @include respond(xxxl){
+        margin: 0px 15px;
+        border-radius: 15px;
+    }
+    @include respond(xl){
+        margin: 0px;
+        border-radius: 0;
+    }
+}
+
+.orbia-pricing-item{
+    &.style-one{
+        padding: 10px;
+        border: 1px solid $border-color;
+        border-radius: 30px;
+        background-color: $white-color;
+        &.item-active{
+            & .pricing-inner-wrapper{
+                @include respond(md){
+                    padding: 50px 30px 30px;
+                }
+                & .pricing-bg{
+                    visibility: visible;
+                    opacity: 1;
+                }
+                & .pricing-header{
+                    & p,
+                    & .price,
+                    & .plan{
+                        color: $white-color;
+                    }
+                }
+                & .pricing-body{
+                    & .check-list{
+                        & li{
+                            color: $white-color;
+                            &::before{
+                                background-color: rgba(121, 126, 136, 0.50);
+                            }
+                        }
+                    }
+                }
+                & .pricing-button{
+                    & .theme-btn{
+                        &.gradient-btn{
+                            color: $white-color;
+                            &:before{
+                                background-color: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .pricing-inner-wrapper{
+            padding: 40px 60px 45px;
+            display: flex;
+            border-radius: 30px;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            @include respond(lg){
+                flex-direction: column;
+                padding: 30px;
+            }
+            @include respond(md){
+                padding: 30px 30px;
+            }
+            & .rib-badge{
+                position: absolute;
+                padding: 0 15px;
+                background-color: $white-color;
+                font-family: $heading-font;
+                top: 0;
+                left: 17%;
+                color: $heading-color;
+                background: url(../images/home-one/gallery/price-shape.png) no-repeat;
+                background-size: cover;
+                background-position: center;
+                width: 150px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            & .pricing-header{
+                width: 30%;
+                @include respond(xl){
+                    width: 25%;
+                }
+                @include respond(lg){
+                    width: 100%;
+                }
+                & .plan{
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+                & h2{
+                    font-size: $h2-font;
+                }
+            }
+            & .pricing-body{
+                width: 45%;
+                flex-grow: 1;
+                @include respond(xl){
+                    width: 50%;
+                }
+                @include respond(lg){
+                    width: 100%;
+                    padding: 20px 0;
+                }
+                & .check-list{
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    & li{
+                        width: 50%;
+                        @include respond(md){
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            & .pricing-button{
+                width: 25%;
+                text-align: end;
+                @include respond(lg){
+                    width: 100%;
+                    text-align: start;
+                }
+                & .theme-btn{
+                    @include respond(xl){
+                        font-size: 14px;
+                        padding: 16px 20px;
+                    }
+                    &.gradient-btn{
+                        position: relative;
+                        overflow: hidden;
+                        background: linear-gradient(266deg, #F63 -1.18%, #6D2CF9 96.14%);
+                        color: $heading-color;
+                        &:before{
+                            position: absolute;
+                            content: '';
+                            inset: 1px;
+                            background-color: $white-color;
+                            border-radius: 50px;
+                        }
+                        & span{
+                            position: relative;
+                            z-index: 1;
+                        }
+                        &:hover{
+                            color: $white-color;
+                            &:before{
+                                background-color: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.style-two{
+        position: relative;
+        z-index: 1;
+        padding: 40px;
+        border-radius: 30px;
+        border: 1px solid $border-color;
+        background-color: $white-color;
+        transition: all .3s;
+        & .shape{
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1;
+        }
+        & .badge{
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            padding: 11px 25px;
+            line-height: 1;
+            background: linear-gradient(266deg, #F63 -1.18%, #6D2CF9 96.14%);
+            border-radius: 50px;
+            font-size: 14px;
+        }
+        & .pricing-header{
+            padding-bottom: 35px;
+            margin-bottom: 35px;
+            border-bottom: 1px solid $border-color;
+            & img{
+                display: block;
+                margin-bottom: 20px;
+            }
+            & .plan{
+                color: $heading-color;
+                font-size: $h3-font;
+                font-weight: 500;
+                font-family: $heading-font;
+            }
+            & p{
+                margin-bottom: 15px;
+                margin-bottom: 20px;
+            }
+            & .price{
+                color: $heading-color;
+                font-size: 54px;
+                font-weight: 500;
+                font-family: $heading-font;
+                & span{
+                    font-size: 16px;
+                    color: $text-color;
+                }
+            }
+        }
+        & .pricing-body{
+            margin-bottom: 40px;
+            & .check-list{
+                &.style-one{
+                    & li{
+                        color: $text-color;
+                        &:not(:last-child){
+                            margin-bottom: 22px;
+                        }
+                        & i{
+                            color: $secondary-color;
+                        }
+                    }
+                }
+            }
+        }
+        &:hover{
+            box-shadow: 1px 7px 49px 0 rgba(0, 0, 0, 0.09);
+        }
+    }
+}
+
+.orbia-pricing_two{
+    & .orbia-pricing-item{
+        &.style-two{
+            border-color: transparent;
+        }
+    }
+}

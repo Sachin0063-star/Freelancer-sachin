@@ -1,0 +1,184 @@
+
+/*======================
+    About Section  CSS
+=======================*/
+
+.orbia-about_one{
+    position: relative;
+    z-index: 1;
+    & .shape{
+        position: absolute;
+        right: 0;
+        bottom: 60px;
+        @include respond(xxxl){
+            max-width: 300px;
+        }
+        @include respond(xl){
+            display: none;
+        }
+    }
+    & .orbia-image-box{
+        position: relative;
+        z-index: 1;
+        & .image_one{
+            & img{
+                border-radius: 30px;
+            }
+        }
+        & .image_two{
+            position: absolute;
+            bottom: 50px;
+            right: 0;
+            @include respond(xl){
+                right: 180px;
+            }
+            @include respond(md){
+                position: relative;
+                right: auto;
+                bottom: auto;
+                margin-top: -70px;
+                text-align: center;
+            }
+        }
+    }
+    & .orbia-content-box{
+        padding-left: 30px;
+        @include respond(xl){
+            padding-left: 0;
+        }
+        & .check-list{
+            max-width: 350px;
+            @include respond(xl){
+                max-width: 430px;
+            }
+            @include respond(md){
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+
+.orbia-about_two{
+    padding-top: 535px;
+    @include respond(xl){
+        padding-top: 120px;
+    }
+    & .shape{
+        position: absolute;
+        top: 450px;
+        left: 0;
+        @include respond(xxxl){
+            max-width: 230px;
+        }
+        @include respond(xl){
+            display: none;
+        }
+    }
+    & .orbia-content-box{
+        padding-left: 30px;
+        @include respond(xl){
+            padding-left: 0;
+        }
+        & h3{
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 5px;
+            &:after{
+                content: '';
+                width: 80px;
+                height: 1px;
+                background-color: $heading-color;
+                margin-left: 10px;
+            }
+        }
+        & > p{
+            margin-bottom: 30px;
+        }
+        & .check-list{
+            &.style-one{
+                & li{
+                    &:not(:last-child){
+                        margin-bottom: 21px;
+                    }
+                }
+                & i{
+                    color: $secondary-color;
+                }
+            }
+        }
+        & > h5{
+            margin-bottom: 30px;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+}
+
+.orbia-about_three{
+    & .orbia-text-box{
+        & h2{
+            font-size: $h2-font;
+            @include respond(xxxl){
+                font-size: 44px;
+            }
+            @include respond(lg_xl){
+                font-size: 38px;
+            }
+            @include respond(md){
+                font-size: 22px;
+                line-height: 1.5em;
+            }
+            & .fill-text{
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: $heading-color;
+                color: transparent;
+                display: block;
+            }
+            & .image_one{
+                border-radius: 100px;
+            }
+        }
+    }
+}
+
+.orbia-about_four{
+    & .orbia-image-box{
+        position: relative;
+        min-height: 635px;
+        z-index: 1;
+        & .orbia-image{
+            &.image_one{
+                & img{
+                    border-radius: 30px;
+                }
+            }
+            &.image_two{
+                position: absolute;
+                right: 30px;
+                bottom: 0;
+            }
+        }
+        & .shape{
+            position: absolute;
+            z-index: -1;
+            &.shape-one{
+                left: 15px;
+                bottom: 35px;
+            }
+            &.shape-two{
+                top: 0;
+                right: 30px;
+            }
+            @include respond(md){
+                display: none;
+            }
+        }
+    }
+    & .orbia-content-box{
+        & > p{
+            margin-bottom: 25px;
+        }
+    }
+}

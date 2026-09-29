@@ -1,0 +1,70 @@
+
+/*----------------------------------------------------------------------------------- 
+
+Template Name: Orbia - AI Agency & Technology HTML Template
+URI: https://nayonacademy.com/
+Description: Orbia – AI Agency & Technology HTML Template is a modern, clean, and fully responsive template designed for AI startups, tech companies, digital agencies, and innovative businesses. With a sleek user interface and cutting-edge design, Orbia helps you showcase your services, products, and projects in a professional way.
+Author: Themeservices
+Author URI: https://themeforest.net/user/themeservices
+Version: 1.0 
+
+
+------------------------------------------------------
+   CSS INDEX
+-----------------------------------------------------
+
+    # Components
+        # Base CSS
+        # Common CSS
+        # Preloader CSS
+        # Offcanvas CSS
+        # Animation CSS
+        # Button CSS
+    # Sections
+       # Header CSS
+       # Hero Section CSS
+       # About Section CSS
+       # Features Section CSS
+       # Service Section CSS
+       # Counter Section CSS
+       # Process Section CSS
+       # Project Section CSS
+       # Pricing Section CSS
+       # Faq Section CSS
+       # Testimonial Section CSS
+       # Company Section CSS
+       # CTA Section CSS
+       # Contact Section CSS
+       # Error Section CSS
+       # Footer CSS
+-------------------------------------------------------    */
+
+
+// Abstract
+
+@import "abstract";
+
+@import 'components/base';
+@import 'components/common';
+@import 'components/preloader';
+@import 'components/offcanvas';
+@import 'components/animations';
+@import 'components/buttons';
+@import 'sections/header';
+@import 'sections/hero';
+@import 'sections/about';
+@import 'sections/features';
+@import 'sections/service';
+@import 'sections/counter';
+@import 'sections/process';
+@import 'sections/project';
+@import 'sections/pricing';
+@import 'sections/faq';
+@import 'sections/team';
+@import 'sections/testimonial';
+@import 'sections/blog';
+@import 'sections/company';
+@import 'sections/cta';
+@import 'sections/contact';
+@import 'sections/error';
+@import 'sections/footer';

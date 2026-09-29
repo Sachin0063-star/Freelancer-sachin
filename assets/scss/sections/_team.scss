@@ -1,0 +1,383 @@
+
+/*======================
+    Team Section  CSS
+=======================*/
+
+.team-thumb-item{
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    background-color: $gray-color;
+    padding: 10px;
+    border: 1px solid transparent;
+    & .thumb{
+        flex: 0 0 auto;
+        width: 100px;
+        margin-right: 30px;
+        & img{
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+    & .content{
+        & h5{
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.orbia-progress-item{
+    & .progress-title{
+        & h6{
+            font-weight: 400;
+            margin-bottom: 10px;
+            & span{
+                float: right;
+            }
+        }
+    }
+    & .progress{
+        background-color: transparent;
+        border: 1px solid $primary-color;
+        height: 6px;
+        border-radius: 10px;
+        & .progress-bar{
+            border: 1px solid $white-color;
+            background-color: $primary-color;
+        }
+    }
+}
+
+.orbia-team-item{
+    &.style-one{
+        border-radius: 20px;
+        background-color: $gray-color;
+        padding: 10px;
+        & .member-image{
+            & img{
+                width: 100%;
+                border-radius: 20px;
+            }
+        }
+        & .member-info{
+            padding: 20px 10px;
+            & .position{
+                margin-bottom: 20px;
+            }
+            & .social-box{
+                & a{
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 50%;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid $border-color;
+                    font-size: 12px;
+                    &:not(:last-child){
+                        margin-right: 5px;
+                    }
+                    &:hover{
+                        background-color: $secondary-color;
+                        color: $white-color;
+                        border-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+    &.style-two{
+        border: 1px solid $border-color;
+        padding: 20px;
+        border-radius: 30px;
+        &:hover{
+            & .member-image{
+                background-color: $heading-color;
+                & .social-box{
+                    right: 20px;
+                }
+            }
+        }
+        & .member-image{
+            position: relative;
+            background-color: $gray-color;
+            text-align: center;
+            border-radius: 20px;
+            padding: 20px 20px 0;
+            text-align: center;
+            overflow: hidden;
+            transition: all .3s;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            & .shape{
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+            & .social-box{
+                position: absolute;
+                top: 20px;
+                right: -100%;
+                padding: 10px;
+                background-color: $primary-color;
+                border-radius: 100px;
+                transition: all .35s;
+                & a {
+                    display: block;
+                    color: $white-color;
+                    
+                }
+            }
+        }
+        & .member-info{
+            padding: 25px 10px 5px;
+        }
+    }
+}
+
+.team-content-box{
+    background-color: $gray-color;
+    border: 1px solid $border-color;
+    border-radius: 30px;
+    padding: 30px 30px 40px;
+    position: relative;
+    z-index: 1;
+    & .shape{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+    }
+    & .content{
+        & h4{
+            margin-bottom: 20px;
+        }
+        & p{
+            font-size: 14px;
+            line-height: 24px;
+            padding-bottom: 104px;
+            @include respond(xxxl){
+                padding-bottom: 48px;
+            }
+            @include respond(lg_xl){
+                padding-bottom: 155px;
+            }
+            @include respond(lg){
+                padding-bottom: 104px;
+            }
+        }
+    }
+}
+
+
+.orbia-team_one{
+    & .shape{
+        position: absolute;
+        bottom: 55px;
+        right: 55px;
+        z-index: -1;
+        @include respond(lg){
+            bottom: 0;
+        }
+        @include respond(lg){
+            display: none;
+        }
+    }
+    & .nav-tabs{
+        border-bottom: none;
+        flex-direction: column;
+        @include respond(xl){
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        @include respond(lg){
+            justify-content: center;
+        }
+    }
+    & .team-thumb-item{
+        cursor: pointer;
+        &.active{
+            background-color: transparent;
+            border-color: $border-color;
+        }
+    }
+    & .member-image{
+        & img{
+            border-radius: 30px;
+        }
+        @include respond(lg){
+            margin-bottom: 40px;
+        }
+    }
+    & .member-info{
+        padding-left: 30px;
+        @include respond(xl){
+            padding-left: 0;
+        }
+        & .position{
+            margin-bottom: 10px;
+        }
+        & p{
+            margin-bottom: 25px;
+        }
+        & .team-experience-social-box{
+            border: 1px solid $border-color;
+            border-radius: 100px;
+            display: flex;
+            align-items: center;
+            max-width: 525px;
+            margin-left: -40%;
+            justify-content: space-between;
+            padding-right: 20px;
+            @include respond(lg){
+                margin-left: 0;
+                padding-right: 0;
+            }
+            @include respond(md){
+                flex-direction: column;
+                border-radius: 20px;
+                padding: 20px;
+            }
+            & .experience-box{
+                background-color: $heading-color;
+                padding: 9px 20px;
+                border-radius: 100px 20px 20px 100px;
+                @include respond(md){
+                    border-radius: 10px;
+                    margin-bottom: 20px;
+                }
+                & h3{
+                    display: inline-flex;
+                    align-items: center;
+                    font-size: 36px;
+                    color: $white-color;
+                    & span{
+                        margin-left: 20px;
+                        font-size: 16px;
+                        font-weight: 400;
+                    }
+                }
+            }
+            & .social-box{
+                & a{
+                    position: relative;
+                    width: 36px;
+                    height: 36px;
+                    border: 1px solid $border-color;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 14px;
+                    color: $heading-color;
+                    border-radius: 50%;
+                    &:not(:last-child){
+                        margin-right: 5px;
+                    }
+                    &:hover{
+                        background:linear-gradient(266deg, #F63 -1.18%, #6D2CF9 96.14%);
+                        border-color: transparent;
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.orbia-team_two{
+    & .text-box{
+        & h2{
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: $primary-color;
+            color: transparent;
+            font-size: 84px;
+            font-weight: 700;
+        }
+    }
+}
+
+
+/* Team Details Wrapper */ 
+
+.team-details-wrapper{
+    & .member-image-wrap{
+        background-color: $gray-color;
+        border-radius: 20px;
+        padding: 20px;
+        & .member-image{
+            & img{
+                width: 100%;
+                border-radius: 20px;
+            }
+        }
+        & .member-info{
+            padding: 20px 20px 0;
+            & .position{
+                margin-bottom: 20px;
+            }
+            & .info-list{
+                border-top: 1px solid $border-color;
+                padding-top: 20px;
+                margin-bottom: 20px;
+                & h6{
+                    margin-bottom: 5px;
+                }
+            }
+            & .social-box{
+                & a{
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 50%;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid $border-color;
+                    font-size: 12px;
+                    &:not(:last-child){
+                        margin-right: 5px;
+                    }
+                    &:hover{
+                        background-color: $secondary-color;
+                        color: $white-color;
+                        border-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+    & .team-details-content{
+        & .content-box{
+            & h3{
+                margin-bottom: 20px;
+                @include respond(md){
+                    font-size: 24px;
+                }
+            }
+            & p{
+                margin-bottom: 25px;
+            }
+        }
+        & .contact-wrapper{
+            & h3{
+                margin-bottom: 30px;
+                @include respond(md){
+                    font-size: 24px;
+                }
+            }
+            & .form_control{
+                width: 100%;
+                padding: 14px 25px;
+                border-radius: 50px;
+                border:1px solid $border-color;
+                margin-bottom: 30px;
+            }
+            & .theme-btn{
+                &.theme-btn{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

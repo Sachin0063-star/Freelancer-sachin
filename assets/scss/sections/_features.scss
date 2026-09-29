@@ -1,0 +1,964 @@
+
+/*======================
+    Features Section  CSS
+=======================*/
+
+.orbia-iconic-left-box{
+    &.style-one{
+        display: flex;
+        align-items: center;
+        & .icon{
+            flex: 0 0 auto;
+            width: 70px;
+            margin-right: 20px;
+        }
+        .content{
+            & h5{
+                margin-bottom: 8px;
+            }
+        }
+    }
+    &.style-two{
+        display: flex;
+        align-items: center;
+        & .icon{
+            flex: 0 0 auto;
+            margin-right: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            background-color: #FBEAEB;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        & .content{
+            & h5{
+                font-weight: 500;
+                line-height: 30px;
+            }
+        }
+    }
+}
+
+
+.orbia-iconic-box{
+    &.style-one{
+        position: relative;
+        background-color: $gray-color;
+        padding: 40px 40px 35px;
+        border-radius: 20px;
+        border: 1px solid transparent;
+        &:hover{
+            & .box-border{
+                visibility: visible;
+                opacity: 1;
+            } 
+            & .icon-wrap{
+                & .icon{
+                    & img{
+                        filter: brightness(1) invert(0);
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        & .box-border{
+            position: absolute;
+            inset: -2px;
+            border-radius: 20px;
+            background: linear-gradient(264deg, #F63 -31.73%, #6D2CF9 120.95%);
+            visibility: hidden;
+            opacity: 0;
+            z-index: -1;
+            transition: all .3s;
+        }
+        & .icon-wrap{
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            & .number{
+                font-family: $heading-font;
+                font-size: 54px;
+                color: rgba(121, 126, 136, 0.20);
+            }
+            & .icon{
+                & img{
+                    filter: brightness(10) invert(1);
+                    opacity: .1;
+                    transition: all .3s;
+                }
+            }
+        }
+        & .content{
+            padding-top: 110px;
+            @include respond(xxxl){
+                padding-top: 100px;
+            }
+            & h4.title{
+                margin-bottom: 20px;
+                font-size: $h4-font;
+                @include respond(xxxl){
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+    &.style-two{
+        position: relative;
+        background-color: $white-color;
+        padding: 40px;
+        z-index: 1;
+        border-radius: 30px;
+        overflow: hidden;
+        &:hover{
+            & .icon{
+                & img{
+                    filter: brightness(1) invert(0);
+                }
+            }
+            & .content{
+                & .read-more{
+                    &.style-one{
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+        & .shape{
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1;
+        }
+        & .sn-number{
+            font-size: 18px;
+            font-weight: 500;
+            font-family: $heading-font;
+            color: $heading-color;
+            margin-bottom: 55px;
+        }
+        & .icon{
+            margin-bottom: 22px;
+            & img{
+                filter: brightness(0) invert(0);
+                transition: filter 0.3s ease;
+            }
+        }
+        & .content{
+            & .title{
+                font-size: $h3-font;
+                font-weight: 500;
+                margin-bottom: 40px;
+                @include respond(xl){
+                    font-size: $h4-font;
+                }
+            }
+            & p{
+                margin-bottom: 25px;
+            }
+            & .read-more{
+                &.style-one{
+                    color: $heading-color;
+                    font-weight: 700;
+                    & i{
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
+    }
+    &.style-three{
+        & .icon{
+            margin-bottom: 25px;
+        }
+        & .content{
+            & h5{
+                margin-bottom: 15px;
+            }
+        }
+    }
+    &.style-four{
+        text-align: center;
+        padding: 0 30px;
+        & .icon{
+            width: 90px;
+            height: 90px;
+            border: 1px solid $border-color;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $white-color;
+            margin-bottom: 33px;
+        }
+        & .content{
+            & h4{
+                margin-bottom: 20px;
+                font-size: $h4-font;
+                @include respond(md){
+                    font-size: $h5-font;
+                }
+            }
+        }
+    }
+    &.style-five{
+        position: relative;
+        z-index: 1;
+        border-radius: 20px;
+        background-color: $white-color;
+        text-align: center;
+        padding: 40px 40px 30px;
+        @include respond(xxxl){
+            padding: 30px 30px 20px;
+        }
+        @include respond(xl){
+            padding: 40px 40px 30px;
+        }
+        & .shape{
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+        }
+        & .icon{
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            background-color: $gray-color;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        & .content{
+            & h4{
+                font-size: $h4-font;
+                margin-bottom: 15px;
+                @include respond(xxxl){
+                    font-size: $h5-font;
+                }
+            }
+        }
+    }
+}
+
+.orbia-content-item{
+    &.style-one{
+        & .content{
+            & .title{
+                font-weight: 500;
+                font-size: $h3-font;
+                margin-bottom: 13px;
+            }
+        }
+    }
+    &.style-two{
+        border: 1px solid #797E88;
+        padding: 25px 20px;
+        border-radius: 20px;
+        & .content{
+            & h5{
+                font-size: $h5-font;
+                margin-bottom: 10px;
+                font-weight: 500;
+            }
+        }
+    }
+    &.style-three{
+        border-radius: 30px;
+        background-color: transparent;
+        border: 1px solid $border-color;
+        padding: 23px 30px 25px;
+        display: flex;
+        transition: all .3s;
+        @include respond(md){
+            flex-direction: column;
+        }
+        &:hover{
+            background-color: #F8F8F8;
+            border-color: transparent;
+        }
+        & .sn-number{
+            margin-right: 15px;
+            margin-top: 7px;
+            font-size: 24px;
+            color: $heading-color;
+            font-weight: 500;
+            font-family: $heading-font;
+            @include respond(md){
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+        & .content{
+            & .title{
+                font-size: $h4-font;
+                margin-bottom: 5px;
+                @include respond(md){
+                    font-size: $h5-font;
+                }
+            }
+        }
+    }
+}
+
+/* Features Section CSS */
+
+.orbia-features_one{
+    & .orbia-support-box{
+        display: flex;
+        align-items: center;
+        & .thumb{
+            position: relative;
+            flex: 0 0 auto;
+            width: 80px;
+            margin-right: 50px;
+            & img{
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                border:1px solid $secondary-color;
+            }
+            & .icon{
+                position: absolute;
+                top: 10px;
+                right: -40px;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                background-color: $secondary-color;
+                color: $white-color;
+                border: 2px solid $white-color;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        & .info{
+            & h5{
+                margin-bottom: 5px;
+            }
+        }
+    }
+    & .features-wrapper{
+        background-color: $gray-color;
+        border-radius: 60px;
+        padding: 60px;
+        @include respond(xl){
+            padding: 30px;
+            border-radius: 30px;
+        }
+        & .nav-tabs{
+            border-bottom: none;
+            @include respond(xl){
+                justify-content: center;
+            }
+        }
+        & li{
+            &:not(:last-child){
+                margin-right: 30px;
+            }
+        }
+        & .nav-link{
+            padding: 17px 30px;
+            line-height: 1;
+            border: 1px solid $border-color;
+            background-color: transparent;
+            border-radius: 50px;
+            font-weight: 700;
+            color: $heading-color;
+            margin-bottom: 20px;
+            &.active{
+                background-color: $secondary-color;
+                color: $white-color;
+                border-color: transparent;
+            }
+            @include respond(xl){
+                padding: 15px 20px;
+            }
+        }
+        & .orbia-content-box{
+            & h4{
+                margin-bottom: 20px;
+            }
+            & p{
+                margin-bottom: 20px;
+            }
+            & .counter-box-wrapper{
+                border-bottom: 1px solid $border-color;
+                margin-bottom: 30px;
+            }
+            & .check-list{
+                &.style-one{
+                    & li{
+                        &:not(:last-child){
+                            margin-bottom: 25px;
+                        }
+                        & i{
+                            color: $secondary-color;
+                        }
+                    }
+                }
+            }
+        }
+        & .orbia-image{
+            & img{
+                border-radius: 30px;
+            }
+        }
+    }
+}
+
+
+.orbia-features_two{
+    .orbia-image-box{
+        position: relative;
+        min-height: 545px;
+        & .orbia-avatar-box{
+            position: absolute;
+            bottom: 0;
+            left: 60px;
+            margin-right: -60px;
+            z-index: 1;
+        }
+    }
+    & .orbia-image{
+        & img{
+            border-radius: 30px;
+        }
+    }
+    & .orbia-avatar-box{
+        border-radius: 20px;
+        background-color: $white-color;
+        box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.07);
+        padding: 30px 20px;
+        & .avatar-list{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            & ul{
+                & li{
+                    & img{
+                        width: 48px;
+                        height: 48px;
+                    }
+                    & span{
+                        width: 48px;
+                        height: 48px;
+                    }
+                }
+            }
+        }
+    }
+    & .orbia-content-box{
+        & .orbia-content-item{
+            max-width: 455px;
+        }
+    }
+}
+
+.orbia-features_three{
+    padding: 20px 10px;
+    margin: 0 30px;
+    border-radius: 30px;
+    @include respond(xxxl){
+        margin: 0;
+        border-radius: 0;
+    }
+    & .orbia-image{
+        position: relative;
+        & img{
+            border-radius: 30px;
+        }
+    }
+    & .orbia-avatar-box{
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        border-radius: 30px;
+        background-color: $white-color;
+        padding: 20px;
+        & .avatar-list{
+            & h3{
+                font-weight: 500;
+                margin-bottom: 10px;
+            }
+            & h5{
+                font-weight: 500;
+                margin-bottom: 15px;
+            }
+        }
+    }
+    & .orbia-content-box{
+        padding-right: 270px;
+        @include respond(xxxl){
+            padding-right: 0;
+        }
+    }
+}
+
+/* Technology Section */
+
+
+.orbia-technology-sec{
+    position: relative;
+    z-index: 1;
+    margin: 30px;
+    background-color: $gray-color;
+    border-radius: 30px;
+    & .tech-bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 50px;
+        width: 47%;
+        height: 100%;
+        z-index: -1;
+        @include respond(xl){
+            display: none;
+        }
+    }
+    
+}
+
+/* Who Section CSS */
+
+.orbia-we_one{
+    position: relative;
+    z-index: 1;
+    & .shape{
+        position: absolute;
+        right: 80px;
+        bottom: 120px;
+        z-index: -1;
+        @include respond(xxxl){
+            max-width: 150px;
+            right: 40px;
+            bottom: 40px;
+        }
+        @include respond(xl){
+            display: none;
+        }
+    }
+    & .orbia-image-box{
+        position: relative;
+        & .orbia-client-box{
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            border-radius: 20px;
+            padding: 10px;
+            background-color: $white-color;
+            display: flex;
+            align-items: center;
+            @include respond(md){
+                left: 10px;
+                bottom: 10px;
+            }
+            & .thumb{
+                flex: 0 0 auto;
+                width: 115px;
+                & img{
+                    border-radius: 10px;
+                }
+            }
+            & .content{
+                padding: 0 30px;
+                @include respond(md){
+                    padding: 0 20px 0 15px;
+                }
+                & h5{
+                    line-height: 28px;
+                }
+            }
+        }
+        & .orbia-image{
+            & img{
+                border-radius: 30px;
+            }
+        }
+    }
+    & .orbia-content-box{
+        & > p{
+            margin-bottom: 30px;
+        }
+        & .check-list{
+            & li{
+                &:not(:last-child){
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        & .iconic-box-wrapper{
+            border-top: 1px solid $border-color;
+            padding-top: 30px;
+            & .item-column{
+                position: relative;
+                &:not(:last-child){
+                    &:after{
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        display: inline-block;
+                        content: '';
+                        width: 1px;
+                        height: 60px;
+                        margin-left: 30px;
+                        margin-right: 40px;
+                        background-color: $border-color;
+                        @include respond(md){
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.orbia-we_two{
+    & .orbia-content-box{
+        padding-right: 50px;
+        & > p{
+            margin-bottom: 30px;
+        }
+        & .iconic-box-wrapper{
+            border-top: 1px solid $border-color;
+            padding-top: 30px;
+            & .item-column{
+                position: relative;
+                &:not(:last-child){
+                    &:after{
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        display: inline-block;
+                        content: '';
+                        width: 1px;
+                        height: 60px;
+                        margin-left: 30px;
+                        margin-right: 40px;
+                        background-color: $border-color;
+                        @include respond(md){
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & .orbia-image{
+        & img{
+            border-radius: 30px;
+        }
+    }
+}
+
+/* Choose Section CSS */ 
+
+.orbia-choose_one{
+    margin: 0 30px;
+    @include respond(xxxl){
+        margin: 0 15px;
+    }
+    @include respond(xl){
+        margin: 0;
+    }
+    & .orbia-choose-wrapper{
+        background-color: $heading-color;
+        border-radius: 30px;
+        overflow: hidden;
+        padding: 20px 8px;
+        @include respond(xl){
+            padding: 60px 30px;
+            border-radius: 0;
+        }
+        @include respond(md){
+            padding: 60px 15px;
+            border-radius: 0;
+        }
+    }
+    & .orbia-image{
+        position: relative;
+        margin-right: 50px;
+        @include respond(xxxl){
+            margin-right: 20px;
+        }
+        @include respond(xl){
+            margin-right: 0;
+        }
+        & img{
+            border-radius: 30px;
+        }
+        & .orbia-rating-box{
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            padding: 5px 20px 15px;
+            background-color: $white-color;
+            border-radius: 20px;
+        }
+    }
+    & .orbia-content-box{
+        padding-top: 20px;
+        padding-right: 250px;
+        margin-left: -15px;
+        @include respond(xxxl){
+            margin-left: 0;
+            padding-right: 0px;
+        }
+        & > p{
+            color: $white-color;
+            margin-bottom: 30px;
+            @include respond(xxxl){
+                margin-bottom: 20px;
+            }
+        }
+        & .experience-iconic-wrapper{
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.20);
+            border-top: 1px solid rgba(255, 255, 255, 0.20);
+            margin-bottom: 35px;
+            @include respond(xxxl){
+                margin-bottom: 15px;
+            }
+            @include respond(md){
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            & .experience-box{
+                padding-right: 60px;
+                @include respond(lg){
+                    padding-right: 0;
+                }
+                & .content{
+                    @include respond(lg){
+                        display: none;
+                    }
+                    & .number{
+                        display: flex;
+                        align-items: center;
+                        & h2{
+                            background: linear-gradient(90deg, #5a00ff, #ff4da6);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            font-size: 194px;
+                            line-height: 165px;
+                            font-weight: 700;
+                            @include respond(xxxl){
+                                font-size: 145px;
+                            }
+                        }
+                        & .symbol{
+                            width: 90px;
+                            margin-top: 15px;
+                            margin-left: 10px;
+                        }
+                    }
+                    & h4{
+                        color: $white-color;
+                        margin-top: 15px;
+                        @include respond(xxxl){
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+            & .iconic-box-list{
+                padding: 35px 0 5px 60px;
+                border-left: 1px solid rgba(255, 255, 255, 0.20);
+                @include respond(xxxl){
+                    padding: 35px 0 5px 30px;
+                }
+                @include respond(lg){
+                    border-left: none;
+                    padding-left: 0;
+                }
+                @include respond(md){
+                    border-top: rgba(255, 255, 255, 0.20);
+                    padding: 40px 0 10px;
+                    border-left: none;
+                }
+                & .orbia-iconic-left-box{
+                    &.style-one{
+                        & .content{
+                            & h5{
+                                color: $white-color;
+                            }
+                            & p{
+                                color: rgba(255, 255, 255, 0.70);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.orbia-choose_two{
+    & .orbia-image-box{
+        min-height: 460px;
+        position: relative;
+        & .orbia-image{
+            & img{
+                border-radius: 30px;
+            }
+            &.image_one{
+                position: absolute;
+                top: 0;
+                left: 35px;
+                & img{
+                    transform: rotate(-15deg);
+                }
+                @include respond(md){
+                    left: auto;
+                    top: auto;
+                    position: relative;
+                }
+            }
+            &.image_two{
+                text-align: right;
+            }
+        }
+        & .orbia-ratings-box{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: $white-color;
+            border-radius: 30px;
+            padding: 30px;
+            box-shadow: 0 10px 46px 0 rgba(0, 0, 0, 0.07);
+            & h3{
+                margin-bottom: 5px;
+            }
+            & h5{
+                margin-bottom: 20px;
+            }
+            & .avatar-list{
+                & ul{
+                    & li{
+                        & span{
+                            background-color: $secondary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & .orbia-content-box{
+        padding-left: 30px;
+        @include respond(xl){
+            padding-left: 0;
+        }
+        & > p{
+            margin-bottom: 25px;
+        }
+        & h5{
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+}
+
+/* Orbia Work Section */ 
+
+.orbia-work-sec{
+    & .orbia-content-box{
+        padding-right: 40px;
+        @include respond(xl){
+            padding-right: 0;
+        }
+    }
+    & .orbia-image{
+        margin-right: -30px;
+        @include respond(xl){
+            margin-right: 0;
+        }
+        & img{
+            border-radius: 30px;
+            
+        }
+    }
+}
+
+
+/* Approach Section */
+
+.orbia-approach-sec{
+    overflow: hidden;
+    padding: 30px 0 0;
+    & .container-fluid{
+        padding-left: 30px;
+        padding-right: 30px;
+        @include respond(xxxl){
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    & .orbia-content-box{
+        padding-right: 300px;
+        padding-left: 35px;
+        @include respond(xxxl){
+            padding-right: 0;
+        }
+        @include respond(xl){
+            padding-left: 0;
+        }
+        & > p{
+            margin-bottom: 30px;
+            @include respond(xxxl){
+                margin-bottom: 15px;
+            }
+        }
+        & h4{
+            margin-bottom: 30px;
+            font-size: $h4-font;
+            @include respond(xxxl){
+                margin-bottom: 15px;
+            }
+            @include respond(md){
+                font-size: $h5-font;
+            }
+        }
+        & .orbia-counter-wrap{
+            max-width: 500px;
+        }
+        & .orbia-counter-box{
+            max-width: 235px;
+            border-radius: 30px;
+            padding: 20px 030px;
+            border: 1px solid $border-color;
+            & .content{
+                & h3{
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+    & .orbia-image{
+        position: relative;
+        @include respond(xl){
+            margin-bottom: 50px;
+        }
+        & .experience-box{
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            background-color: #f8f8f8;
+            border-radius: 0 15px 00;
+            padding: 5px 15px;
+            & .content{
+                display: flex;
+                align-items: center;
+                & h5{
+                    margin-left: 20px;
+                    padding-left: 20px;
+                    border-left: 1px solid $border-color;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+
+/*======================
+    Error Section  CSS
+=======================*/
+
+.orbia-error-sec{
+    & .orbia-content-box{
+        & .orbia-image{
+            margin-bottom: 20px;
+        }
+        & h2{
+            margin-bottom: 30px;
+            @include respond(md){
+                font-size: 28px;
+            }
+        }
+        & p{
+            max-width: 505px;
+            margin: 0 auto 40px;
+        }
+    }
+}

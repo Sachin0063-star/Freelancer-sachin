@@ -1,0 +1,85 @@
+
+
+/*======================
+    Faq Section  CSS
+=======================*/
+
+.orbia-faq-sec{
+    & .faq-image{
+        margin-left: -100px;
+        @include respond(xxxl){
+            margin-left: -50px;
+        }
+        @include respond(xl){
+            margin-left: 0;
+        }
+    }
+    & .orbia-content-box{
+        margin-left: -60px;
+        @include respond(xxxl){
+            margin-left: 0;
+        }
+    }
+}
+
+.accordion-card{
+    & .accordion-header{
+        & .accordion-title{
+            display: flex;
+            align-items: center;
+            line-height: 28px;
+            cursor: pointer;
+            font-weight: 600;
+            &:after{
+                flex: 0 0 auto;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                content: '\f067';
+                font-family: 'Font Awesome 5 Pro';
+                font-weight: 900;
+                font-size: 18px;
+                color: $primary-color;
+                margin-left: auto;
+                transition: all .3s;
+            }
+        }
+        & .accordion-title[aria-expanded=true]{
+            &:after{
+                content: '\f068';
+            }
+        }
+    }
+    &.style-one{
+        padding: 20px 30px;
+        border-radius: 50px;
+        border: 1px solid $border-color;
+        background-color: $gray-color;
+        & .accordion-header{
+            & .accordion-title{
+                font-weight: 400;
+                &:after{
+                    color: $heading-color;
+                }
+            }
+        }
+        & .accordion-content{
+            padding-top: 20px;
+        }
+    }
+    &.style-two{
+        border-bottom: 1px solid $border-color;
+        & .accordion-header{
+            & .accordion-title{
+                &:after{
+                    color: $secondary-color;
+                }
+            }
+        }
+        & .accordion-content{
+            & p{
+                
+            }
+        }
+    }
+}
